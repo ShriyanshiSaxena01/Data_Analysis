@@ -1,0 +1,883 @@
+Sure! Below is your complete document with **all 11 sections of Day 1 restored**, followed by a separate Day 2 section containing your new practical.
+
+# Python – Day 1 Notes
+
+## 1. What is Python?
+
+Python is a high-level, beginner-friendly programming language used for data analysis, automation, web development, artificial intelligence, and more.
+
+## 2. Create and Run Your First Python File
+
+1. Open a code editor such as VS Code.
+2. Create a file named `main.py`.
+3. Write:
+
+```
+print("Hello, World!")
+```
+
+4. Save the file.
+5. Open the terminal in the folder where `main.py` is saved.
+6. Run:
+
+```
+python main.py
+```
+
+**Output:**
+
+```
+Hello, World!
+```
+
+**Remember:**
+
+- `main.py` is the Python file name. The name `main` is common, but not compulsory.
+- `print()` displays text or values.
+- `python main.py` runs the Python file.
+
+## 3. What is pip?
+
+pip is Python’s package installer. It is used to install and manage external packages.
+
+**Install Pandas:**
+
+```
+python -m pip install pandas
+```
+
+**Install NumPy:**
+
+```
+python -m pip install numpy
+```
+
+**Install both together:**
+
+```
+python -m pip install pandas numpy
+```
+
+Note: Run installation commands in the terminal, not inside your Python file.
+
+## 4. Types of Python Modules and Packages
+
+**1. Built-in / standard-library modules**
+
+These are provided with Python. You can usually import them without installing anything separately.
+
+Examples: `os`, `math`, `random`, `datetime`, `sys`, `json`, and `statistics`.
+
+**2. External / third-party packages**
+
+These are developed separately and generally need to be installed, often using pip.
+
+Examples: `pandas`, `numpy`, `matplotlib`, and `requests`.
+
+## 5. What is OS?
+
+OS stands for Operating System. It is the main system software that manages a computer’s hardware and software and allows programs to run.
+
+Examples of operating systems: Windows, macOS, and Linux.
+
+## 6. What is the Python os Module?
+
+Python’s `os` module is a standard-library module. It lets a Python program interact with the operating system—for example, work with folders and files, view the current working directory, and create or list directories.
+
+Because `os` is part of Python’s standard library, you do not normally need to install it with pip.
+
+**How to import os**
+
+Add this line at the top of your Python file:
+
+```
+import os
+```
+
+**Useful examples**
+
+**1. Check the current working directory**
+
+```
+import os
+print(os.getcwd())
+```
+
+`os.getcwd()` shows the folder from which the program is currently running.
+
+**2. List files and folders**
+
+```
+import os
+print(os.listdir())
+```
+
+`os.listdir()` displays the files and folders in the current directory.
+
+**3. Create a new folder**
+
+```
+import os
+os.mkdir("MyFolder")
+```
+
+`os.mkdir()` creates a folder named MyFolder in the current directory. The folder should not already exist.
+
+**4. Check whether a file or folder exists**
+
+```
+import os
+print(os.path.exists("main.py"))
+```
+
+`os.path.exists()` returns `True` if the given path exists; otherwise, it returns `False`.
+
+## 7. Common Built-in Python Modules
+
+| Module        | What it is used for                                         |
+| ------------- | ----------------------------------------------------------- |
+| `os`          | Interacting with the operating system, files, and folders   |
+| `math`        | Mathematical functions such as square root and power        |
+| `random`      | Generating random numbers and making random selections      |
+| `datetime`    | Working with dates and times                                |
+| `time`        | Time-related functions and delays                           |
+| `sys`         | Accessing Python interpreter and system-related information |
+| `json`        | Reading and writing JSON data                               |
+| `statistics`  | Basic statistics such as mean, median, and mode             |
+| `pathlib`     | Working with file and folder paths                          |
+| `re`          | Working with regular expressions and text patterns          |
+| `csv`         | Reading and writing CSV files                               |
+| `collections` | Specialised data containers such as Counter and deque       |
+
+Important: This is a beginner-friendly selection, not the complete list. Python includes many more standard-library modules.
+
+## 8. What is Pandas?
+
+Pandas is an external Python library used to organise, clean, analyse, and work with structured data, especially data in rows and columns.
+
+## 9. What is NumPy?
+
+NumPy (Numerical Python) is an external Python library used for numerical and mathematical computing. It provides efficient arrays and tools for calculations.
+
+## 10. Quick Revision
+
+| Term             | Meaning                                            |
+| ---------------- | -------------------------------------------------- |
+| Python           | A programming language                             |
+| `main.py`        | A Python source-code file                          |
+| `print()`        | Displays output                                    |
+| Terminal         | Where we run commands and Python files             |
+| pip              | Python package installer                           |
+| OS               | Operating System                                   |
+| `import os`      | Imports Python’s os module                         |
+| Built-in module  | A module provided by Python’s standard library     |
+| External package | A third-party package usually installed separately |
+| Pandas           | Library for data handling and analysis             |
+| NumPy            | Library for numerical computing                    |
+
+## 11. Useful Google Search
+
+To explore the full official list, search Google for:
+
+**Python 3 Standard Library**
+
+Open the official Python documentation result titled *The Python Standard Library*. It contains the full module reference, grouped by topic.
+
+## Day 1 – Topics Covered
+
+- Python introduction
+- First Hello World program
+- Creating and running `main.py`
+- Installing packages using pip
+- Built-in and external modules/packages
+- OS and Python’s os module
+- Importing os and using common os functions
+- Introduction to Pandas and NumPy
+
+---
+
+# Python – Day 2 Notes
+
+## 1. Importing Modules in Python
+
+Python allows us to import different modules into a program to use their built-in functions and features.
+
+**Example:**
+
+```
+import os
+import json
+```
+
+- `import os` – Imports the os module to interact with the operating system, files, and folders.
+- `import json` – Imports the json module to work with JSON data.
+
+Note: Both `os` and `json` are built-in Python standard-library modules. They do not require separate installation using pip.
+
+## 2. What is JSON?
+
+JSON stands for **JavaScript Object Notation**.
+
+It is a lightweight data format used to store and exchange data between applications.
+
+Python provides a built-in `json` module to work with JSON data.
+
+**Uses of JSON:**
+
+- Storing data.
+- Sharing data between applications.
+- Transferring data through APIs.
+- Reading and writing structured data.
+
+**Example of JSON data:**
+
+```
+{
+    "name": "Shriyanshi",
+    "age": 23,
+    "course": "Python"
+}
+```
+
+## 3. Day 2 Practical Program
+
+**Code:**
+
+```
+import os
+import json
+
+print("Hello, World!")
+print(os.listdir("."))
+print(os.getcwd())
+```
+
+## 4. Explanation of the Code
+
+**1. `import os`**
+
+Imports the os module, which allows Python to interact with the operating system.
+
+**2. `import json`**
+
+Imports the json module, which allows Python to read and work with JSON data.
+
+**3. `print("Hello, World!")`**
+
+Displays the message Hello, World! on the screen.
+
+**4. `print(os.listdir("."))`**
+
+Displays all files and folders present in the current working directory.
+
+- `os.listdir()` lists the contents of a directory.
+- `"."` represents the current directory.
+
+**5. `print(os.getcwd())`**
+
+Displays the complete path of the current working directory.
+
+## 5. Understanding the Output
+
+**Example output:**
+
+```
+Hello, World!
+['main.py', 'MyFolder', '.venv']
+C:\Users\ASUS\OneDrive\Desktop\git\DATA ANALYST
+```
+
+Note: Your output may be different depending on the files and folders present in your current working directory.
+
+## 6. Important os Functions Revision
+
+| Function                    | Purpose                                          |
+| --------------------------- | ------------------------------------------------ |
+| `os.getcwd()`               | Gets the current working directory               |
+| `os.listdir(".")`           | Lists files and folders in the current directory |
+| `os.mkdir("MyFolder")`      | Creates a new folder                             |
+| `os.path.exists("main.py")` | Checks whether a file or folder exists           |
+
+## 7. Difference Between os.listdir() and os.getcwd()
+
+| Function          | What it displays                                    |
+| ----------------- | --------------------------------------------------- |
+| `os.listdir(".")` | Names of files and folders in the current directory |
+| `os.getcwd()`     | Complete path of the current working directory      |
+
+## 8. Quick Revision – Day 2
+
+| Term / Function   | Meaning                                |
+| ----------------- | -------------------------------------- |
+| `import os`       | Imports the OS module                  |
+| `import json`     | Imports the JSON module                |
+| JSON              | JavaScript Object Notation             |
+| `print()`         | Displays output                        |
+| `os.listdir(".")` | Lists files and folders                |
+| `os.getcwd()`     | Displays the current working directory |
+| `"."`             | Represents the current directory       |
+
+## Day 2 – Topics Covered
+
+- Importing multiple Python modules
+- Introduction to JSON
+- Understanding JSON and its uses
+- Revising the Python os module
+- Using `os.listdir(".")`
+- Using `os.getcwd()`
+- Understanding the current working directory
+- Writing and executing a combined Python practical program
+
+
+
+
+Great! Your Day 3 covers **Python Data Types, Comments, Type Conversion, User Input, and Operators**. I've organised your practical code into proper explanations, examples, and revision tables, keeping it separate from Day 1 and Day 2.
+
+# Python – Day 3 Notes
+
+## 1. Python Data Types
+
+Data types define the type of value stored in a variable.
+
+Python has several built-in data types. Today we learned five basic data types.
+
+### Common Data Types
+
+| Data Type        | Description                    | Example         |
+| ---------------- | ------------------------------ | --------------- |
+| Integer (`int`)  | Whole numbers without decimals | `23`            |
+| String (`str`)   | Text or characters             | `"John Doe"`    |
+| Boolean (`bool`) | Represents True or False       | `True`, `False` |
+| Float (`float`)  | Numbers with decimal points    | `23.5`          |
+
+### Example:
+
+```
+a = 23                 # Integer
+name = "John Doe"      # String
+is_admin = True        # Boolean
+is_banned = False      # Boolean
+price = 23.5           # Float
+
+print(type(a))
+print(type(name))
+print(type(is_admin))
+print(type(is_banned))
+print(type(price))
+```
+
+**Output:**
+
+```
+<class 'int'>
+<class 'str'>
+<class 'bool'>
+<class 'bool'>
+<class 'float'>
+```
+
+### What is type()?
+
+The `type()` function is used to identify the data type of a variable or value.
+
+Example:
+
+```
+age = 23
+print(type(age))
+```
+
+Output:
+
+```
+<class 'int'>
+```
+
+## 2. Comments in Python
+
+Comments are notes written inside Python code to explain what the code does.
+
+Python ignores comments during program execution.
+
+### Single-Line Comments
+
+A single-line comment starts with the `#` symbol.
+
+Example:
+
+```
+# This is a comment
+name = "Shriyanshi"
+print(name)
+```
+
+**Output:**
+
+```
+Shriyanshi
+```
+
+### Uses of Comments
+
+- Explain the purpose of code.
+- Make code easier to understand.
+- Add notes for future reference.
+- Temporarily disable code while testing.
+
+## 3. Type Conversion in Python
+
+Type conversion means changing a value from one data type to another.
+
+For example:
+
+- String to Integer
+- Integer to Float
+- Float to Integer
+- Integer to String
+
+### Common Type Conversion Functions
+
+| Function  | Purpose                                   | Example         |
+| --------- | ----------------------------------------- | --------------- |
+| `int()`   | Converts a compatible value to an integer | `int("45")`     |
+| `float()` | Converts a compatible value to a float    | `float("23.5")` |
+| `str()`   | Converts a value to a string              | `str(100)`      |
+| `bool()`  | Converts a value to a Boolean             | `bool(1)`       |
+
+### Example: String to Integer
+
+```
+age = "45"       # String
+print(int(age) + 5)
+```
+
+**Output:**
+
+```
+50
+```
+
+Explanation:
+
+- `"45"` is initially a string.
+- `int(age)` converts the string into an integer.
+- `5` is added to the integer.
+- The final result is `50`.
+
+**Important:** You cannot directly perform normal mathematical calculations between a string and an integer. Convert the value to the appropriate data type first.
+
+## 4. Taking Input from the User
+
+Python provides the `input()` function to accept information directly from the user.
+
+### What is input()?
+
+- It pauses program execution.
+- It waits for the user to enter information.
+- The user presses Enter to submit the input.
+- It always returns the entered value as a string.
+- It can display an optional prompt message.
+
+### Example 1: Taking Name as Input
+
+```
+name = input("Enter your name: ")
+print("Hello " + name)
+```
+
+**Example Output:**
+
+```
+Enter your name: Shriyanshi
+Hello Shriyanshi
+```
+
+### Example 2: Taking Multiple Inputs
+
+```
+print("Welcome to the program")
+
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+
+print("Hello " + name + ", you are " + age + " years old.")
+```
+
+**Example Output:**
+
+```
+Welcome to the program
+Enter your name: Shriyanshi
+Enter your age: 23
+Hello Shriyanshi, you are 23 years old.
+```
+
+### Example 3: Converting User Input into an Integer
+
+```
+age = int(input("Enter your age: "))
+print(age + 5)
+```
+
+**Example Output:**
+
+```
+Enter your age: 23
+28
+```
+
+Explanation:
+
+- `input()` takes the age from the user.
+- `int()` converts the input string into an integer.
+- `5` is added to the age.
+
+### Important Points About input()
+
+1. `input()` always returns a string.
+2. Use `int()` when you need whole-number calculations.
+3. Use `float()` when you need decimal-number calculations.
+4. The prompt inside `input()` helps users understand what information to enter.
+
+## 5. What are Operators in Python?
+
+Operators are special symbols or keywords that perform specific operations on one or more operands.
+
+They are used to manipulate data and variables in programming.
+
+Example:
+
+```
+5 + 3
+```
+
+- `5` and `3` are operands.
+- `+` is the operator.
+- `5 + 3` is the operation (expression).
+- `8` is the result.
+
+### Types of Python Operators
+
+1. Arithmetic Operators
+2. Comparison Operators
+3. Logical Operators
+4. Assignment Operators
+5. Membership Operators
+6. Identity Operators
+
+## 6. Arithmetic Operators
+
+Arithmetic operators are used to perform mathematical calculations.
+
+| Operator | Name           | Example   | Result     |
+| -------- | -------------- | --------- | ---------- |
+| `+`      | Addition       | `10 + 3`  | `13`       |
+| `-`      | Subtraction    | `10 - 3`  | `7`        |
+| `*`      | Multiplication | `10 * 3`  | `30`       |
+| `/`      | Division       | `10 / 3`  | `3.333...` |
+| `%`      | Modulus        | `10 % 3`  | `1`        |
+| `//`     | Floor Division | `10 // 3` | `3`        |
+| `**`     | Exponentiation | `10 ** 3` | `1000`     |
+
+### Practical Example
+
+```
+a = 10
+b = 3
+
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
+print("Modulus:", a % b)
+print("Floor Division:", a // b)
+print("Exponentiation:", a ** b)
+```
+
+**Output:**
+
+```
+Addition: 13
+Subtraction: 7
+Multiplication: 30
+Division: 3.3333333333333335
+Modulus: 1
+Floor Division: 3
+Exponentiation: 1000
+```
+
+### Important Difference: /, // and %
+
+- `/` – Returns the division result, usually with a decimal.
+- `//` – Returns the floor of the division result.
+- `%` – Returns the remainder after division.
+- `**` – Raises a number to the power of another number.
+
+## 7. Comparison Operators
+
+Comparison operators compare two values and return either `True` or `False`.
+
+| Operator | Meaning                  | Example           |
+| -------- | ------------------------ | ----------------- |
+| `==`     | Equal to                 | `5 == 5` → True   |
+| `!=`     | Not equal to             | `5 != 10` → True  |
+| `>`      | Greater than             | `10 > 5` → True   |
+| `<`      | Less than                | `5 < 10` → True   |
+| `>=`     | Greater than or equal to | `10 >= 10` → True |
+| `<=`     | Less than or equal to    | `5 <= 10` → True  |
+
+### Practical Example
+
+```
+x = 5
+y = 10
+
+print("Equal:", x == y)
+print("Not Equal:", x != y)
+print("Greater Than:", x > y)
+print("Less Than:", x < y)
+print("Greater Than or Equal:", x >= y)
+print("Less Than or Equal:", x <= y)
+```
+
+**Output:**
+
+```
+Equal: False
+Not Equal: True
+Greater Than: False
+Less Than: True
+Greater Than or Equal: False
+Less Than or Equal: True
+```
+
+## 8. Logical Operators
+
+Logical operators are used to combine or reverse conditions.
+
+There are three main logical operators:
+
+| Operator | Meaning | Description                              |
+| -------- | ------- | ---------------------------------------- |
+| `and`    | AND     | True only when both conditions are True  |
+| `or`     | OR      | True when at least one condition is True |
+| `not`    | NOT     | Reverses the Boolean result              |
+
+### Practical Example
+
+```
+p = True
+q = False
+
+print("and:", p and q)
+print("or:", p or q)
+print("not:", not p)
+```
+
+**Output:**
+
+```
+and: False
+or: True
+not: False
+```
+
+## 9. Assignment Operators
+
+Assignment operators are used to assign values to variables and update their values.
+
+| Operator | Meaning             | Example    |
+| -------- | ------------------- | ---------- |
+| `=`      | Assign value        | `num = 10` |
+| `+=`     | Add and assign      | `num += 5` |
+| `-=`     | Subtract and assign | `num -= 3` |
+| `*=`     | Multiply and assign | `num *= 2` |
+| `/=`     | Divide and assign   | `num /= 4` |
+| `%=`     | Modulus and assign  | `num %= 3` |
+
+### Practical Example
+
+```
+num = 10
+
+print("Initial value:", num)
+
+num += 5
+print("After += 5:", num)
+
+num -= 3
+print("After -= 3:", num)
+
+num *= 2
+print("After *= 2:", num)
+
+num /= 4
+print("After /= 4:", num)
+```
+
+**Output:**
+
+```
+Initial value: 10
+After += 5: 15
+After -= 3: 12
+After *= 2: 24
+After /= 4: 6.0
+```
+
+**Remember:**
+
+- `num += 5` means `num = num + 5`.
+- `num -= 3` means `num = num - 3`.
+- `num *= 2` means `num = num * 2`.
+- `num /= 4` means `num = num / 4`.
+
+## 10. Other Python Operators
+
+### 1. Membership Operators
+
+Membership operators check whether a value exists inside a sequence, such as a string, list, or tuple.
+
+| Operator | Meaning                               |
+| -------- | ------------------------------------- |
+| `in`     | Checks whether a value exists         |
+| `not in` | Checks whether a value does not exist |
+
+Example:
+
+```
+name = "Python"
+
+print("P" in name)
+print("z" not in name)
+```
+
+**Output:**
+
+```
+True
+True
+```
+
+### 2. Identity Operators
+
+Identity operators check whether two variables refer to the same object in memory.
+
+| Operator | Meaning                                                 |
+| -------- | ------------------------------------------------------- |
+| `is`     | Checks whether two variables refer to the same object   |
+| `is not` | Checks whether two variables refer to different objects |
+
+Example:
+
+```
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+
+print(a is b)
+print(a is c)
+print(a == c)
+```
+
+**Output:**
+
+```
+True
+False
+True
+```
+
+Remember:
+
+- `is` checks object identity.
+- `==` checks whether values are equal.
+
+## 11. Operator Precedence in Python
+
+Operator precedence determines the order in which operations are performed in an expression.
+
+Python follows a specific order of precedence.
+
+| Priority | Operators                        | Description                                       |
+| -------- | -------------------------------- | ------------------------------------------------- |
+| 1        | `()`                             | Parentheses                                       |
+| 2        | `**`                             | Exponentiation                                    |
+| 3        | `*`, `/`, `//`, `%`              | Multiplication, division, floor division, modulus |
+| 4        | `+`, `-`                         | Addition and subtraction                          |
+| 5        | `==`, `!=`, `<`, `>`, `<=`, `>=` | Comparison                                        |
+| 6        | `not`                            | Logical NOT                                       |
+| 7        | `and`                            | Logical AND                                       |
+| 8        | `or`                             | Logical OR                                        |
+
+### Example:
+
+```
+result = 5 + 3 * 2
+print(result)
+```
+
+**Output:**
+
+```
+11
+```
+
+Explanation:
+
+Multiplication is performed before addition.
+
+```
+5 + (3 * 2)
+5 + 6
+11
+```
+
+Note: Parentheses can be used to control the order of calculations. Operators at the same precedence level may have their own associativity rules.
+
+## 12. Quick Revision
+
+| Topic                | Important Concept            |
+| -------------------- | ---------------------------- |
+| Integer              | Whole numbers                |
+| String               | Text values                  |
+| Boolean              | True or False                |
+| Float                | Decimal numbers              |
+| `type()`             | Identifies the data type     |
+| Comments             | Use `#`                      |
+| `int()`              | Converts to integer          |
+| `float()`            | Converts to float            |
+| `str()`              | Converts to string           |
+| `input()`            | Takes user input             |
+| Arithmetic operators | Mathematical calculations    |
+| Comparison operators | Compare values               |
+| Logical operators    | Combine conditions           |
+| Assignment operators | Assign and update values     |
+| Membership operators | Check whether a value exists |
+| Identity operators   | Compare object identity      |
+| Operator precedence  | Determines calculation order |
+
+## Day 3 – Topics Covered
+
+- Python data types: Integer, String, Boolean, Float
+- Checking data types using `type()`
+- Comments in Python
+- Type conversion
+- Taking user input using `input()`
+- Converting user input into integers
+- Introduction to Python operators
+- Arithmetic operators
+- Comparison operators
+- Logical operators
+- Assignment operators
+- Membership operators
+- Identity operators
+- Operator precedence
+
+**Your learning progress so far:**
+
+- Day 1 – Python basics, pip, modules, OS, Pandas and NumPy.
+- Day 2 – Importing modules, JSON and working with directories.
+- Day 3 – Data types, input, type conversion and operators.
+
+Next, we can build Day 4 notes in exactly the same format as you continue learning.
